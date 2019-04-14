@@ -9,7 +9,7 @@
   // usuario e senha
   function conecta ($basenome, $usuario, $senha)
   {
-    $host="143.107.137.62";    
+    $host="143.107.137.62";    //host do DCM
     $porta="5432";
 
     //php guarda erros na var php_errormsg
@@ -45,7 +45,7 @@
       exit;
     }
     else
-      return $tupla; 
+      return $tupla;
   }
 
   function desconecta($conexao)
