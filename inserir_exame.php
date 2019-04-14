@@ -1,5 +1,4 @@
 ﻿
-
 <html>
 <head>
   <title>Cadastro paciente</title>
@@ -7,7 +6,7 @@
 
 <?php
 	require("bdfunc.php");
-  
+
 	if (isset($_POST['botaoagendar'])) {
 		$Sus = $_POST['string_sus'];
 		$Crm = $_POST['string_crm'];
@@ -15,15 +14,15 @@
 		$Dia = $_POST['exame_dia'];
 		$Mes = $_POST['exame_mes'];
 		$Ano = $_POST['exame_ano'];
-		$Data = "$Ano"."-"."$Mes"."-"."$Dia"; 
+		$Data = "$Ano"."-"."$Mes"."-"."$Dia";
 		$Horario = $_POST['string_horario'];
 		$Dia = $_POST['retorno_dia'];
 		$Mes = $_POST['retorno_mes'];
 		$Ano = $_POST['retorno_ano'];
 		$Retorno = "$Ano"."-"."$Mes"."-"."$Dia";
-		
+
 		$Secretaria = $_POST['id_secretaria'];
-	
+
 		// atributos "NOT NULL"
 		if (!(
 		$Sus AND
@@ -36,7 +35,7 @@
 		echo "NÃO FOI PREENCHIDO TODOS OS CAMPOS OBRIGATÓRIOS.";
 		exit();
 		}
-  
+
 	$conexao = conecta("Man12", "userman12", "userman12");
 
 	//sequenciador de id
@@ -46,7 +45,7 @@
 	$n = 0;
 	for ($cl=0; $cl<$linhas; $cl++){
 		$n = pg_result($id, $cl, 0);
-		if($n > $max_id)	
+		if($n > $max_id)
 			{$max_id = $n;}
 	}$n = $n+1;
 
@@ -59,7 +58,7 @@
     if ($resultado){
       echo "Operação realizada!";
     }
-    else{ 
+    else{
       echo "Não deu certo!";
     }
     desconecta($conexao);

@@ -1,6 +1,5 @@
 ﻿
-
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html>
 <head>
 	<title>Consulta acompanhante</title>
@@ -9,7 +8,7 @@
       body{background:#ffffff;}
    </style>
 </head>
- 
+
 <body>
 	<!-- TABELA PRINCIPAL -->
 	<table cellspacing="0" align="center" width="800px" bgcolor="#ffffff"><tr><td>
@@ -80,7 +79,7 @@
 
 				<tr><td bgcolor="#3b5898" align="center">
 					<a href="tabela_acompanhante.php">Consultar<br>Acompanhante</a></td></tr>
-					
+
 				</table>
          </td>
 			<td>
@@ -90,7 +89,7 @@
 <?php
 
 include ("bdfunc.php");
-  
+
 //prepara uma tabela. cabecalho primeiro
   echo"<div class='rolagem'>".
 		"<table width='800' border='5' cellpadding='4' align='center' bgcolor='BLACK'>".

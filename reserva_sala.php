@@ -1,6 +1,5 @@
 ﻿
-
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html>
 <head>
 	<title>Reserva sala</title>
@@ -9,7 +8,7 @@
       body{background:#ffffff;}
    </style>
 </head>
- 
+
 <body>
 	<!-- TABELA PRINCIPAL -->
 	<table cellspacing="0" align="center" width="800px" bgcolor="#ffffff"><tr><td>
@@ -76,13 +75,13 @@
 					<a href="tabela_medico.php">Médicos</a></td></tr>
 
 				<tr><td bgcolor="#3b5898" align="center">
-					<a href="tabela_secretaria.php">Secretárias</a></td></tr>					
+					<a href="tabela_secretaria.php">Secretárias</a></td></tr>
 				</table>
          </td>
 			<td>
 
 <!--coluna central-->
-<?php 
+<?php
 include ("bdfunc.php"); //nao aborta se der erro
 $conexao = conecta("Man12", "userman12", "userman12");
 $cadeia = "SELECT numero,nome_sala FROM sala ORDER BY numero";
@@ -134,7 +133,7 @@ echo "
 					<td><label for='hora_fim'>Fim </label></td>
 					<td><input type='text' name='hora_fim' size='5' maxlength='5' value='00h00'></td>
 				</tr>
-			</table>	 		
+			</table>
 		</fieldset>
 			<table align='center' width='100%'>
 				<tr>

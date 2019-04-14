@@ -1,5 +1,4 @@
 ﻿
-
 <html>
 <head>
   <title>Cadastro acompanhante</title>
@@ -7,14 +6,14 @@
 
 <?php
 	require("bdfunc.php");
-  
+
 	if (isset($_POST['botaocadastrar'])) {
 		$Nome = $_POST['string_nome'];
 		$rg = $_POST['string_rg'];
 		$verif = $_POST['string_verif'];
-		$RG = "$rg"."-"."$verif"; 
+		$RG = "$rg"."-"."$verif";
 		$Paciente = $_POST['string_paci'];
-	
+
 		// atributos "NOT NULL"
 		if (!(
 		$Nome AND
@@ -24,7 +23,7 @@
 		echo "NÃO FOI PREENCHIDO TODOS OS CAMPOS OBRIGATÓRIOS.";
 		exit();
 		}
-  
+
     $conexao = conecta("Man12", "userman12", "userman12");
 
     $cadeia = "INSERT INTO acompanhante (nome_acomp,rg_acomp,nsus_paciente) VALUES('$Nome','$RG','$Paciente');";
@@ -34,7 +33,7 @@
     if ($resultado){
       echo "Operação realizada!";
     }
-    else{ 
+    else{
       echo "Não deu certo!";
     }
     desconecta($conexao);

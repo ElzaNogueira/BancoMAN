@@ -1,5 +1,4 @@
 ﻿
-
 <html>
 <head>
   <title>Cadastro usuário</title>
@@ -7,7 +6,7 @@
 
 <?php
 	require("bdfunc.php");
-  
+
 	if (isset($_POST['botaoconta'])) {
 		$Email = $_POST['string_email'];
 		$Usuario_ppth = $_POST['string_usuario'];
@@ -37,7 +36,7 @@
     if ($resultado){
       echo "Operação realizada!";
     }
-    else{ 
+    else{
       echo "Não deu certo!";
     }
     desconecta($conexao);

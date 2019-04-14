@@ -1,4 +1,5 @@
-﻿<html>
+
+<html>
 <head>
    <title>Consulta Telefone</title>
    <link rel="stylesheet" type="text/css" href="tema1.css">
@@ -12,7 +13,7 @@
 
 <?php
   include ("bdfunc.php");
-  
+
 
   //prepara uma tabela. cabecalho primeiro
   echo "<table border='1' align='center'>".

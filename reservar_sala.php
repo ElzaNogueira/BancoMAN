@@ -1,5 +1,4 @@
 ﻿
-
 <html>
 <head>
   <title>Cadastro paciente</title>
@@ -7,7 +6,7 @@
 
 <?php
 	require("bdfunc.php");
-  
+
 	if (isset($_POST['botaoreserva'])) {
 		$nsala = (int)$_POST['string_nsala'];
 		$Crm = $_POST['string_crm'];
@@ -30,7 +29,7 @@
 		echo "NÃO FOI PREENCHIDO TODOS OS CAMPOS OBRIGATÓRIOS.";
 		exit();
 		}
-  
+
     $conexao = conecta("Man12", "userman12", "userman12");
 
     $cadeia = "INSERT INTO reserva (num_sala,crm_med,data_reserva,hora_inicio,hora_fim) VALUES($nsala,'$Crm','$Data','$Hinicio','$Hfim');";
@@ -40,7 +39,7 @@
     if ($resultado){
       echo "<br><p align='center'>CADASTRO REALIZADO COM SUCESSO!</p>";
     }
-    else{ 
+    else{
       echo "<p align='center'>FALHA NO CADASTRO!</p>";
     }
     desconecta($conexao);
